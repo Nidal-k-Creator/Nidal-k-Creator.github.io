@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nidal K. — Career AI & Digital Products</title>
+  <meta name="description" content="I help job seekers land interviews faster using AI — and teach creators how to build on Gumroad." />
+  <meta property="og:title" content="Nidal K." />
+  <meta property="og:description" content="Career AI tools and Gumroad growth systems — built in the open." />
+  <meta property="og:url" content="https://nidalresume.me" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #FF90E8;
+      --yellow: #FFE600;
+      --black: #000000;
+      --surface: #111111;
+      --border: rgba(255,255,255,0.1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Badge */
+    .badge {
+      background: var(--pink);
+      color: #000;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding: 5px 14px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    /* Name */
+    .name {
+      font-size: clamp(36px, 8vw, 52px);
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 18px;
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+    .name span { color: var(--yellow); }
+
+    /* Tagline */
+    .tagline {
+      font-size: 16px;
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      max-width: 400px;
+      line-height: 1.65;
+    }
+
+    /* Divider */
+    .divider {
+      width: 36px;
+      height: 2px;
+      background: var(--pink);
+      margin: 32px 0;
+      flex-shrink: 0;
+    }
+
+    /* Bio */
+    .bio {
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      max-width: 460px;
+      line-height: 1.8;
+      margin-bottom: 48px;
+    }
+
+    /* Section label */
+    .section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    /* Product grid */
+    .links-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .link-card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      text-decoration: none;
+      transition: border-color 0.2s ease, transform 0.15s ease;
+      cursor: pointer;
+    }
+    .link-card:hover { transform: translateY(-2px); }
+    .link-card.pink:hover { border-color: var(--pink); }
+    .link-card.yellow:hover { border-color: var(--yellow); }
+    .link-card.muted { cursor: default; opacity: 0.5; }
+    .link-card.muted:hover { transform: none; }
+
+    .lc-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .pink .lc-label { color: var(--pink); }
+    .yellow .lc-label { color: var(--yellow); }
+    .muted .lc-label { color: rgba(255,255,255,0.35); }
+
+    .lc-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.35;
+    }
+    .muted .lc-title { color: rgba(255,255,255,0.5); }
+
+    .lc-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.45;
+      margin-top: 2px;
+    }
+
+    /* Social pills */
+    .social-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .social-pill {
+      background: transparent;
+      border: 0.5px solid rgba(255,255,255,0.18);
+      border-radius: 100px;
+      padding: 9px 20px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .social-pill:hover { border-color: var(--pink); color: var(--pink); }
+
+    /* Footer */
+    .footer {
+      margin-top: 56px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.18);
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+
+    /* Responsive */
+    @media (max-width: 420px) {
+      .links-grid { grid-template-columns: 1fr; }
+      .name { font-size: 36px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .link-card { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <span class="badge">Career AI + Digital Products</span>
+
+    <h1 class="name">Nidal <span>K.</span></h1>
+
+    <p class="tagline">
+      I help job seekers land interviews faster using AI — and teach creators how to build on Gumroad.
+    </p>
+
+    <div class="divider" role="presentation"></div>
+
+    <p class="bio">
+      10+ years in recruiting. 1,000+ LinkedIn profiles optimized. Now I build AI-powered tools for job seekers and systems for digital product creators — documented publicly, built in the open.
+    </p>
+
+    <p class="section-label">Products</p>
+
+    <div class="links-grid">
+      <a class="link-card pink" href="https://nidalresumes.gumroad.com" target="_blank" rel="noopener">
+        <span class="lc-label">@nidalresumes</span>
+        <span class="lc-title">LinkedIn Prompt Kit Pro</span>
+        <span class="lc-desc">60+ AI prompts for your job search</span>
+      </a>
+      <a class="link-card yellow" href="https://gumroadgrowthlab.gumroad.com/" target="_blank" rel="noopener">
+        <span class="lc-label">@gumroadgrowth</span>
+        <span class="lc-title">Gumroad Growth Lab</span>
+        <span class="lc-desc">Systems to grow your digital product revenue</span>
+      </a>
+      <a class="link-card pink" href="https://gumroadgrowthlab.gumroad.com/" target="_blank" rel="noopener">
+        <span class="lc-label">Free Resource</span>
+        <span class="lc-title">Gumroad Conversion Audit Kit</span>
+        <span class="lc-desc">Fix your Gumroad page for free</span>
+      </a>
+      <div class="link-card muted" aria-hidden="true">
+        <span class="lc-label">Coming soon</span>
+        <span class="lc-title">ThreadGrowth 0→1K</span>
+        <span class="lc-desc">The Threads growth playbook</span>
+      </div>
+    </div>
+
+    <p class="section-label">Find me on</p>
+
+    <div class="social-row">
+      <a class="social-pill" href="https://www.threads.com/@nidalresumes" target="_blank" rel="noopener">Threads @nidalresumes</a>
+      <a class="social-pill" href="https://www.threads.com/@gumroadgrowth" target="_blank" rel="noopener">Threads @gumroadgrowth</a>
+    </div>
+
+    <p class="footer">nidalresume.me · Nidal K.</p>
+
+  </main>
+</body>
+</html>
